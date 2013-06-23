@@ -3,7 +3,24 @@ body {
 	font-family: arial;
 }
 
+h1
+{
+    font-size: 52px;
+    color: #b77474;
+}
+
 #top {
-	background: red;
+	background: url('../img/bg1.png');
 	height: 500px;
+}
+
+#top article
+{
+    text-align: center;
+}
+
+#middle
+{
+    background: url('../img/bg2.png');
+    height: 500px;
 }
