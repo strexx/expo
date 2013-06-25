@@ -1,10 +1,9 @@
-$(function()
-{
-  $(".expo-block").on("mouseenter", function()
-    {
-	   var getID = $(this).children('[name="expo"]').val();
-	   $("#top").children("article").css({"background": "url('img/screen"+getID+".png') 50% 0 no-repeat", "opacity": "0.7"});
-	  
-    });
+$(document).ready(function() {
+  $('.expo-block').mouseenter(function(){
+  	$('#top article img').remove();
+  	var ID = $(this).attr('id');
+  	var data = '<img style="width:100%;" src="img/screen'+ID+'.png">';
+	$(data).prependTo('#top article').fadeIn(2000);
+  });
 });
 
