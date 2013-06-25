@@ -10,10 +10,21 @@ h1
     color: #b77474;
 }
 
+header h1 {
+    width: 800px;
+    background: black;
+    font-size: 40px;
+    font-family: 'Monda', sans-serif;
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 #top {
 	background: url('../img/bg1.png');
 	height: 500px;
 	border: 2px solid #000;
+    margin: 50px 0 0 0;
 }
 
 #top article
@@ -51,7 +62,14 @@ h1
     border: 1px solid #000;
     cursor:pointer;
 }
-.expo-block p {margin-top:25px;padding:10px;color:#000;line-height:130%;}
+.expo-block p {
+    margin-top: 25px;
+    padding: 10px;
+    color: #000;
+    line-height: 130%;
+    text-align: center;
+}
+
 h1.title
 {
     position:absolute;
@@ -61,11 +79,15 @@ h1.title
     color:#fff;
 }
 h1.ribbon{
-    margin-top:-1px;
+    margin-top: 5px;
     margin-left:-8px;
     background-image:url(../img/ribbon.png);
     background-repeat:no-repeat;
 }
 .expo-block:hover{
     box-shadow:0px 0px 10px #fff;
+}
+
+.shadow {
+    box-shadow:0px 0px 10px #fff;   
 }
