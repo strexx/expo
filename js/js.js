@@ -1,51 +1,56 @@
-$(document).ready(function() {
+$("#slider").fadeIn();
 
-	var slider = {
+var slider = {
 
-		auto: true,
-		image: 'img/screen*.png',
-		delay: 5000,
+	sliding: $("#slider"),
+	image: 'img/screen*.png',
+	auto: true,
+	delay: 5000,
+	last: 0,
 
-	    slide: function() {
-			var i = 1;
-			if(slider.auto = true) {
-				setInterval(function() {
-					for(var a = 1; a < 6; a++) {
-						$("#" + a).removeClass('shadow');
-					}
-				    var path = slider.image.replace('*', i);
-				    var slide = $("#slider");
-				    slide.fadeOut(function() {
-					    $(this).attr("src", path).fadeIn(5000);
-					});
-				    i = i + 1;
-				    $('#' + i).addClass('shadow');
-				    if (i == 6) i = 1;
-				    console.log($('#' + i));
-				}, slider.delay);
-			}
-	    },
+    slide: function() {
+		var i = 2;
+		if(slider.auto = true) {
+			setInterval(function() {
+				for(var a = 1; a < 6; a++) {
+					$("#" + a).removeClass('shadow');
+				}
+				if(slider.last = 0) {
+					$('#' + slider.last).addClass('shadow');
+				}
+				else {
+					$('#' + i).addClass('shadow');
+				}
+			    var path = slider.image.replace('*', i);
+			    slider.sliding.fadeOut(function() {
+				    $(this).attr("src", path).fadeIn();
+				});
+			    i = i + 1;
+			    if (i == 6) i = 1;
+			}, slider.delay);
+		}
+    },
 
-	    stopslide: function() {
-	    	slider.auto = false;
-	    	for(var i = 1; i < 6; i++) {
-	    		$("#" + i).removeClass('shadow');
-	    	}
-	    }
-	}
+    stopslide: function() {
+    	slider.auto = false;
+    	slider.last = 0;
+    	for(var i = 1; i < 6; i++) {
+    		$("#" + i).removeClass('shadow');
+    	}
+    }
+}
 
-	$('.expo-block').mouseenter(function(){
-		$('#top article img').remove();
-		var id = $(this).attr('id');
-		var data = '<img style="width:100%;" id="slider" src="img/screen'+ id +'.png">';
-		$(data).prependTo('#top article').fadeIn(2000);
-		slider.stopslide();
-	});
+$('.expo-block').hover(function(){
+	var id = $(this).attr('id');
+	$('#slider').fadeOut();
+	$("#slider").attr('src', 'img/screen' + id +'.png').fadeIn();
+	slider.stopslide();
+});
 
-	$('.expo-block').mouseout(function(){
-		slider.slide();
-	});
-
+$('.expo-block').mouseout(function(){
+	slider.auto = true;
+	slider.last = $(this).attr("id");
 	slider.slide();
 });
 
+slider.slide();
