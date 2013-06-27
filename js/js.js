@@ -15,8 +15,6 @@ $(function(){
 		  $("#expo-container").children("article").mouseenter(function(){
 			 slider.auto = false;
 		  });
-		 
-		  
 			 var play = setInterval(function() {
 				slider.autoPlay();
 	
@@ -24,9 +22,22 @@ $(function(){
 			 
 			 $("#expo-container").children("article").mouseenter(function()
 				{
+				    $("#expo-container").children("article").each(function(){
+					   $(this).removeClass("shadow");
+				    });
+				    
+				    var id = $(this).attr("id");
+				    var update = slider.image.replace('*', id);
+				    slider.sliding.fadeOut(function() {
+				    $(this).attr("src", update).fadeIn();
+				    $("#"+imageClassFix).addClass("shadow");
+				});
+				
+				    i = parseInt(id) + 1;
+				    
+				    $(this).addClass("shadow");
 				    slider.pause = 1;
 				    clearInterval(play);
-				    
 				})
 				
 			 $("#expo-container").children("article").mouseleave(function()
