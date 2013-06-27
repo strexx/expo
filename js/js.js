@@ -14,7 +14,6 @@ $(function(){
 	   slide: function() {
 		  $("#expo-container").children("article").mouseenter(function(){
 			 slider.auto = false;
-			 console.log(slider.auto);
 		  });
 		 
 		  
