@@ -84,9 +84,6 @@ h1.ribbon{
     background-image:url(../img/ribbon.png);
     background-repeat:no-repeat;
 }
-.expo-block:hover{
-    box-shadow:0px 0px 10px #fff;
-}
 
 .shadow {
     box-shadow:0px 0px 10px #fff;   
