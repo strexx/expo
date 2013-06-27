@@ -30,7 +30,6 @@ $(function(){
 				    var update = slider.image.replace('*', id);
 				    slider.sliding.fadeOut(function() {
 				    $(this).attr("src", update).fadeIn();
-				    $("#"+imageClassFix).addClass("shadow");
 				});
 				
 				    i = parseInt(id) + 1;
