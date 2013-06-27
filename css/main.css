@@ -21,7 +21,7 @@ header h1 {
 }
 
 #top {
-	background: url('../img/bg1.png');
+	background: url('../images/bg1.png');
 	height: 500px;
 	border: 2px solid #000;
     margin: 50px 0 0 0;
@@ -38,7 +38,7 @@ header h1 {
 
 #middle
 {
-    background: url('../img/bg2.png');
+    background: url('../images/bg2.png');
     height: 500px;
 }
 
@@ -81,7 +81,7 @@ h1.title
 h1.ribbon{
     margin-top: 5px;
     margin-left:-8px;
-    background-image:url(../img/ribbon.png);
+    background-image:url(../images/ribbon.png);
     background-repeat:no-repeat;
 }
 
