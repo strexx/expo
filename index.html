@@ -4,8 +4,6 @@
 
 	   <title>Home</title>
 
-	   <!-- TEMPLATE : http://www.templatemonster.com/website-templates/45155.html -->
-
 	   <!-- META -->
 	   <meta charset="utf-8">
 	   <meta name="description" content="Examenupload">
@@ -46,7 +44,7 @@
 	   <section id="middle">
 		  <div id="expo-container">
 
-			 <article id="1" class="expo-block shadow">
+			 <article id="1" class="expo-block shadow" data-toggle="tooltip" title="first tooltip" data-target="hetvragenboekje">
 				<h1 class="title ribbon">Het Vragenboekje.nl</h1>
 				<p>
 					Hetvragenboekje.nl is de leukste website van Nederland. Het is een platform waar je vragen kunt stellen. Deze vragen worden beantwoord door andere gebruikers. Ook is er een niet te missen optie om de vraag met het meest gekozen antwoord uit te printen op A5 formaat!
@@ -54,39 +52,79 @@
 
 			 </article>
 
-			 <article id="2" class="expo-block">
+			 <article id="2" class="expo-block" data-target="afvallenin3d">
 				<h1 class="title ribbon">Afvallen in 3D</h1>
 				<p>
-					Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde 
+					Ellen Wilbers, voedings- leefwijze- en gezondheidsconsulent en Marjos Papen, professioneel Kinesioloog en 
+					Natuurgeneeskundig therapeut, hebben hun jarenlange expertise en kennis gebundeld in Afvallen in 3D! Een unieke 
+					combinatie van twee vrouwen en twee kennisg gebieden die elkaar perfect aanvullen en waarbij het samengaan meer 
+					oplevert dan de som der delen.
 				</p>
 			 </article>
 
- 			 <article id="3" class="expo-block">
+ 			 <article id="3" class="expo-block" data-target="equito">
 				<h1 class="title ribbon">Equito</h1>
 				<p>
 					Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde 
 				</p>
 			 </article>
 
- 			 <article id="4" class="expo-block">
+ 			 <article id="4" class="expo-block" data-target="prohardenberg">
 				<h1 class="title ribbon">Prohardenberg</h1>
 				<p>
-					Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde 
+					De Hoeksteen is een school voor Praktijkonderwijs. Praktijkonderwijs is bedoeld voor leerlingen die geen diploma in het reguliere voortgezet onderwijs kunnen halen. Praktijkonderwijs is daarom sterk gericht op de praktijk van het dagelijks leven en bereidt de leerlingen zo goed mogelijk voor op functies binnen de arbeidsmarkt.
+
 				</p>
 			 </article>
 
- 			 <article id="5" class="expo-block">
+ 			 <article id="5" class="expo-block" data-target="reliveyourmoments">
 				<h1 class="title ribbon">Reliveyourmoments</h1>
 				<p>
-					Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde 
+					Before you can relive all of your moments you wanted to be sure that everything is save and with easy acces. With the DSS all of your files are backupped without you even notice! So we make it easy for you that everthing can be relived without time travelling!
 				</p>
 			 </article>
 
 		  </div>
 
 	   </section>
+	 
+	<!-- Modal -->
+
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+	  <div class="modal-header">
+
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+    	<div id="menu-website">
+		
+			<select name="project" id="soflow">
+
+				<option value="">Selecteer project</option>
+				<option value="hetvragenboekje">Het Vragenboekje</option>
+				<option value="afvallenin3d">Afvallen in 3D</option>
+				<option value="equito">Equito</option>
+				<option value="prohardenberg">Prohardenberg</option>
+				<option value="reliveyourmoments">Reliveyourmoments</option>
+
+			</select>
+
+		</div>
+
+	  </div>
+
+	  <div class="modal-body"></div>
+
+	  <div class="modal-footer">
+
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
+
+	  </div>
+
+	</div>
 
 	<script src="js/js.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
 
     </body>
 

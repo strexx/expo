@@ -1,4 +1,5 @@
 $(function(){
+
     $("#slider").fadeIn();
 
     var i = 2;
@@ -68,6 +69,24 @@ $(function(){
 				slider.last = i;
 	   }
     }
+
+    $("#expo-container article").click(function() {
+    	$('div.modal-body').empty();
+    	$('div.modal-body').append('<iframe src="http://mi2.hosts.ma-cloud.nl/' + $(this).attr('data-target') + '" frameborder="0"></iframe>')
+    	$('#myModal').modal();
+    });
+
+    $('select[name=project]').change(function() {
+
+    	var project = $('select[name=project] option:selected').val();
+
+    	if( $(this).val() ) {
+	    	$('div.modal-body').fadeOut(function() {
+	    		$('div.modal-body').empty();
+	    		$('div.modal-body').append('<iframe src="http://mi2.hosts.ma-cloud.nl/' + project + '" frameborder="0"></iframe>').fadeIn();
+	    	})
+    	}
+    })
 
     slider.slide();
 });
