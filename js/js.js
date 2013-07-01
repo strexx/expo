@@ -71,7 +71,9 @@ $(function(){
     }
 
     $("#expo-container article").click(function() {
+    	var title = $(this).find('h1').html();
     	$('div.modal-body').empty();
+    	$('select[name=project] option:selected').html(title);
     	$('div.modal-body').append('<iframe src="http://mi2.hosts.ma-cloud.nl/' + $(this).attr('data-target') + '" frameborder="0"></iframe>')
     	$('#myModal').modal();
     });
