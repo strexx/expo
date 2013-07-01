@@ -32,8 +32,13 @@ $(function(){
 				    slider.sliding.fadeOut(function() {
 				    $(this).attr("src", update).fadeIn();
 				});
-				
-				    i = parseInt(id) + 1;
+					
+					i = parseInt(id) + 1;
+
+					if(i == 6)
+						i = i - 1;
+
+					console.log(i);
 				    
 				    $(this).addClass("shadow");
 				    slider.pause = 1;
